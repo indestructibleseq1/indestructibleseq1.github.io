@@ -5,7 +5,7 @@ const CACHE_NAME = 'pwa-formulario-cache-v1';
 // Lista de todos los archivos que deben ser cacheados al instalar la PWA.
 const urlsToCache = [
   '/', // Cacha el root del sitio
-  '/formulario.html',
+  '/index.html',
   '/ayuda.html',
   '/estilos.css',
   '/script.js',
@@ -82,4 +82,5 @@ self.addEventListener('fetch', (event) => {
         return caches.match(event.request);
       })
   );
+
 });
