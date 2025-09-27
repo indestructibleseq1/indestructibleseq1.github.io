@@ -2,7 +2,7 @@
   "name": "PWA de Formulario",
   "short_name": "FormularioApp",
   "description": "Ejemplo de PWA con Material Design para el equipo.",
-  "start_url": "/formulario.html", 
+  "start_url": "/index.html", 
   "display": "standalone",
   "background_color": "#1b1b1e",
   "theme_color": "#af95d1",
@@ -24,4 +24,5 @@
       "purpose": "maskable"
     }
   ]
+
 }
