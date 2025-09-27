@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Principal</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        
+        <header class="header">
+            <span class="menu-hamburguesa" onclick="toggleMenu()">&#9776;</span>
+            <h1 class="titulo-formulario">Formulario</h1>
+        </header>
+
+        <nav id="sidebar-menu" class="sidebar">
+            <a href="formulario.html" class="menu-item active">
+                <span class="material-symbols-outlined">calendar_view_month</span>
+                Formulario
+            </a>
+            <a href="ayuda.html" class="menu-item">
+                <span class="material-symbols-outlined">help</span>
+                Ayuda
+            </a>
+        </nav>
+        <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+        
+        <form class="form-body">
+            
+            <div class="campo-contenedor">
+                <label for="integrante" class="etiqueta-campo">Integrante *</label>
+                <select id="integrante" class="campo-seleccion" required>
+                    <option value="" disabled selected hidden>Selecciona un integrante</option>
+                    <option value="angel">Angel</option>
+                    <option value="missael">Missael</option>
+                    <option value="jessica">Jessica</option>
+                    <option value="esther">Esther</option>
+                    <option value="marco">Marco</option>
+                    <option value="antonio">Antonio</option>
+                </select>
+            </div>
+            
+            <p class="texto-obligatorio">Obligatorio</p>
+            
+            <button type="submit" class="boton-recomendar">Recomendar</button>
+        
+        </form>
+
+    </div>
+
+      <script src="script.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        
+        <header class="header">
+            <span class="menu-hamburguesa" onclick="toggleMenu()">&#9776;</span>
+            <h1 class="titulo-formulario">Ayuda</h1>
+        </header>
+        
+        <nav id="sidebar-menu" class="sidebar">
+            <a href="formulario.html" class="menu-item">
+                <span class="material-symbols-outlined">calendar_view_month</span>
+                Formulario
+            </a>
+            <a href="ayuda.html" class="menu-item active">
+                <span class="material-symbols-outlined">help</span>
+                Ayuda
+            </a>
+        </nav>
+        <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+        <main class="contenido-ayuda">
+            
+            <div class="info-bloque">
+                <h3 class="info-titulo">Título</h3>
+                <p class="info-contenido">PWA con Material Design</p>
+            </div>
+
+            <div class="info-bloque">
+                <h3 class="info-titulo">Descripción</h3>
+                <p class="info-contenido">Ejemplos de vistas móviles.</p>
+            </div>
+
+            <div class="info-bloque">
+                <h3 class="info-titulo">Autor</h3>
+                <p class="info-contenido">Mendez Romero Angel Yael</p>
+                <p class="info-contenido">Perez Barajas Missael</p>
+                <p class="info-contenido">Alejo Cedillo Esther</p>
+                <p class="info-contenido">Resendiz Arroyo Jessica Angeles</p>
+                <p class="info-contenido">Ortiz Hernandez Antonio de Jesus</p>
+                <p class="info-contenido">Torres Lopez Marco Antonio</p>
+            </div>
+
+            <div class="info-bloque">
+                <h3 class="info-titulo">Derechos de autor</h3>
+                <p class="info-contenido">© 2025 Los indestructibles</p>
+            </div>
+
+            <div class="info-bloque">
+                <h3 class="info-titulo">Este software usa la librería para PWA</h3>
+                <p class="info-contenido">
+                    Esta obra de Gilberto Pacheco Gallegos está bajo una 
+                    <a href="#" class="licencia-link">Licencia Creative Commons Atribución 4.0 Internacional</a>
+                </p>
+            </div>
+            
+            <div class="info-bloque">
+                <h3 class="info-titulo">También usa Material Symbols</h3>
+                <p class="info-contenido">Desarrollada por Google bajo licencia Apache 2.0</p>
+            </div>
+
+        </main>
+
+    </div>
+
+      <script src="script.js"></script> 
+
+</body>
+</html>
