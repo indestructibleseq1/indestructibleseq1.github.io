@@ -1,86 +1,113 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayuda</title>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" href="/icons/icon-32x32.png" sizes="32x32"> 
+<html lang="es" class="light dark">
 
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+<head>
+
+       
+    <meta charset="UTF-8">
+        <title>Ayuda - Chistes de Integrantes</title> <!-- Título actualizado -->
+
+       
+    <script src="js/registraServiceWorker.js"></script>
+
+       
+    <meta name="viewport" content="width=device-width">
+       
+    <meta name="theme-color" content="#fffbfe">
+       
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+       
+    <link rel="manifest" href="site.webmanifest">
+       
+    <script src="ungap/custom-elements.js"></script>
+
+    <script type="module" src="js/configura.js"></script>
+       
+    <link rel="stylesheet" href="css/estilos.css">
+       
+    <link rel="stylesheet" href="css/transicion_completa.css">
+
 </head>
+
 <body>
 
-    <div class="contenedor-formulario">
-        
-        <header class="header">
-            <span class="menu-hamburguesa" onclick="toggleMenu()">&#9776;</span>
-            <h1 class="titulo-formulario">Ayuda</h1>
-        </header>
-        
-        <nav id="sidebar-menu" class="sidebar">
-            <a href="index.html" class="menu-item">
-                <span class="material-symbols-outlined">calendar_view_month</span>
-                Formulario
-            </a>
-            <a href="ayuda.html" class="menu-item active">
-                <span class="material-symbols-outlined">help</span>
-                Ayuda
-            </a>
-        </nav>
-        <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+        <md-top-app-bar>
 
-        <main class="contenido-ayuda">
-            
-            <div class="info-bloque">
-                <h3 class="info-titulo">Título</h3>
-                <p class="info-contenido">PWA con Material Design</p>
-            </div>
+                <h1>Ayuda</h1>
 
-            <div class="info-bloque">
-                <h3 class="info-titulo">Descripción</h3>
-                <p class="info-contenido">Ejemplos de vistas móviles.</p>
-            </div>
+                <button is="md-menu-button" slot="navigation"></button>
 
-            <div class="info-bloque">
-                <h3 class="info-titulo">Autor</h3>
-                <p class="info-contenido">Mendez Romero Angel Yael</p>
-                <p class="info-contenido">Perez Barajas Missael</p>
-                <p class="info-contenido">Alejo Cedillo Esther</p>
-                <p class="info-contenido">Resendiz Arroyo Jessica Angeles</p>
-                <p class="info-contenido">Ortiz Hernandez Antonio de Jesus</p>
-                <p class="info-contenido">Torres Lopez Marco Antonio</p>
-            </div>
+            </md-top-app-bar>
 
-            <div class="info-bloque">
-                <h3 class="info-titulo">Derechos de autor</h3>
-                <p class="info-contenido">© 2025 Los indestructibles</p>
-            </div>
+        <main>
 
-            <div class="info-bloque">
-                <h3 class="info-titulo">Este software usa la librería para PWA</h3>
-                <p class="info-contenido">
-                    Esta obra de Gilberto Pacheco Gallegos está bajo una 
-                    <a href="#" class="licencia-link">Licencia Creative Commons Atribución 4.0 Internacional</a>
-                </p>
-            </div>
-            
-            <div class="info-bloque">
-                <h3 class="info-titulo">También usa Material Symbols</h3>
-                <p class="info-contenido">Desarrollada por Google bajo licencia Apache 2.0</p>
-            </div>
+                <ul class="md-list">
+                        <li class="md-two-line">
+                                <span class="headline">
+                                        Título
+                                    </span>
+                                <span class="supporting">
+                                        PWA con Material Design
+                                    </span>
+                            </li>
+                        <li class="md-two-line">
+                                <span class="headline">
+                                        Descripción
+                                    </span>
+                                <span class="supporting">
+                                        Ejemplos de vistas móviles.
+                                    </span>
+                            </li>
+                        <li class="md-two-line">
+                                <span class="headline">
+                                        Autor
+                                    </span>
+                                <span class="supporting">
+                                        Alejo Cedillo Esther, Mendez Romero Angel Yael, Ortiz Hernandez Antonio de
+                    Jesus, Perez Barajas Missael, Resendiz Arroyo Jessica Angeles, Torres Lopez Marco Antonio
+                                    </span>
+                            </li>
+                        <li class="md-two-line">
+                                <span class="headline">
+                                        Derechos de autor
+                                    </span>
+                                <span class="supporting">
+                                        © 2024 Los Indestructibles
+                                    </span>
+                            </li>
+                        <li class="md-three-line">
+                                <span class="headline">
+                                        Este software usa la librería para PWA
+                                    </span>
+                                <span class="supporting">
+                                        Esta obra de Gilberto Pacheco Gallegos está bajo una
+                                        <a target="_blank" rel="license noreferrer"                        
+                        href="http://creativecommons.org/licenses/by/4.0/">
+                                                Licencia Creative Commons Atribución 4.0 Internacional</a></span>
+                            </li>
+                        <li>
+                                <a class="md-three-line" target="_blank" rel=”noreferrer”                    
+                    href="https://fonts.google.com/icons">
+                                        <span class="headline">
+                                                También usa Material Symbols
+                                            </span>
+                                        <span class="supporting">
+                                                Desarrollada por Google bajo licencia Apache 2.0
+                                            </span>
+                                    </a>
+                            </li>
+                    </ul>
 
-        </main>
+            </main>
 
-    </div>
-
-      <script src="script.js"></script> 
+        <!-- NAVEGACIÓN LATERAL: Enlaces para navegar -->
+        <nav-drw>
+                <!-- Enlace al formulario principal -->
+                <a href="index.html" is="md-navigation-item">Formulario</a>
+                <!-- Enlace a la página actual (Ayuda), marcado como seleccionado -->
+                <a href="ayuda.html" is="md-navigation-item" selected>Ayuda</a>
+            </nav-drw>
 
 </body>
 
 </html>
-
