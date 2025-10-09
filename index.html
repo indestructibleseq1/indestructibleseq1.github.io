@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <title>Chistes de Integrantes - PWA con MD</title>
 
-    <script src="js/registraServiceWorker.js"></script>
+    <script src="registraServiceWorker.js"></script>
 
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#fffbfe">
     <link rel="icon" sizes="32x32" href="favicon.ico">
     <link rel="manifest" href="site.webmanifest">
-    <script src="ungap/custom-elements.js"></script>
+    <script src="custom-elements.js"></script>
 
-    <script type="module" src="js/configura.js"></script>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/transicion_completa.css">
+    <script type="module" src="configura.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="transicion_completa.css">
 
 </head>
 
@@ -68,9 +68,9 @@
     </form>
 
     <script type="module">
-        import { muestraTextoDeAyuda } from "./lib/js/muestraTextoDeAyuda.js"
-        import { exportaAHtml } from "./lib/js/exportaAHtml.js"
-        import { muestraError } from "./lib/js/muestraError.js"
+        import { muestraTextoDeAyuda } from "muestraTextoDeAyuda.js"
+        import { exportaAHtml } from "exportaAHtml.js"
+        import { muestraError } from "muestraError.js"
 
         // Se obtienen las referencias a los nuevos IDs
         const selectIntegrantes = document.getElementById("selectIntegrantes");
@@ -131,3 +131,4 @@
 </body>
 
 </html>
+
