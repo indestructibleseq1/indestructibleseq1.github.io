@@ -4,7 +4,7 @@
 <head>
 
  <meta charset="UTF-8">
- <title>PWA- Los Indestructibles</title>
+ <title>PWA con MD</title>
 
  <!-- Resumen para los motores de búsqueda. -->
  <meta name="description" content="PWAMD - Los indestructibles">
@@ -70,12 +70,12 @@
 
  <md-options-menu id="opcionesDeGenero" aria-label="Opciones de género">
    <span data-value="" title="Selecciona género"></span>
-   <span data-value="Angel" title="Angel">Angel</span>
-            <span data-value="Missael" title="Missael">Missael</span>
-            <span data-value="Marco" title="Marco">Marco</span>
-            <span data-value="Antonio" title="Antonio">Antonio</span>
-            <span data-value="Jessica" title="Jessica">Jessica</span>
-            <span data-value="Esther" title="Esther">Esther</span>
+   <span data-value="ang">Angel</span>
+   <span data-value="mis">Missael</span>
+   <span data-value="mar">Marco</span>
+   <span data-value="ant">Antonio</span>
+   <span data-value="jes">Jessica</span>
+   <span data-value="est">Esther</span>
   </md-options-menu>
 
  <nav-drw></nav-drw>
@@ -110,20 +110,20 @@
   }
   exportaAHtml(procesa)
 
- /** @param {string} genero */
+  /** @param {string} genero */
   function recomienda(genero) {
    switch (genero) {
-  case "Angel":
+  case "ang":
     return "Me encantan los mensajes de voz.\nYo los detesto.\nSí, esos también estan chidos."
-  case "Missael":
+  case "mis":
     return "¿Qué hace un mudo bailando? Una mudanza."
-  case "Marco":
+  case "mar":
     return "¿Qué le dice una impresora a otra? Esta hoja es tuya o es impresión mía."
-  case "Antonio":
+  case "ant":
     return "Buenas, quería una camiseta de un personaje inspirador.\n¿Ghandi?.\nNo, mediani."
-  case "Jessica":
+  case "jes":
     return "¿Sabes por qué no se puede discutir con un DJ? Porque siempre están cambiando de tema."
-  case "Esther":
+  case "est":
     return "¿Qué hace una cebolla en una cita? Llora de emoción."
   default:
     return "Invalido"      
@@ -135,5 +135,3 @@
 </body>
 
 </html>
-
-
