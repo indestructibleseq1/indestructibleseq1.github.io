@@ -1,6 +1,6 @@
 {
-    "short_name": "PWA con MD",
-    "name": "PWA con Material Design",
+    "short_name": "Los Indestructibles",
+    "name": "Los Indestructibles",
     "id": "/index.html",
     "start_url": "/index.html",
     "display": "standalone",
@@ -130,4 +130,5 @@
       "purpose": "maskable"
      }
     ]
+
    }
