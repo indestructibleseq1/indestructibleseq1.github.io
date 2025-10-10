@@ -15,12 +15,12 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.00"
+const VERSION = "1.6"
 
 /**
  * Nombre de la carpeta de caché.
  */
-const CACHE = "pwamd"
+const CACHE = "PWAMD-Los indestructibles"
 
 /**
  * Archivos requeridos para que la aplicación funcione fuera de
@@ -28,25 +28,9 @@ const CACHE = "pwamd"
  */
 const ARCHIVOS = [
  "ayuda.html",
- "botones.html",
- "campos.html",
  "favicon.ico",
- "formulario.html",
- "iconos.html",
  "index.html",
- "interruptor.html",
- "navbar.html",
- "navtab.html",
- "navTabFixed.html",
- "one-line.html",
- "secundaria.html",
- "segmentado.html",
- "select.html",
  "site.webmanifest",
- "slider.html",
- "tarjetas.html",
- "three-line.html",
- "two-line.html",
  "css/dark-hc.css",
  "css/dark-mc.css",
  "css/dark.css",
@@ -56,7 +40,6 @@ const ARCHIVOS = [
  "css/light.css",
  "css/transicion_completa.css",
  "css/transicion_pestanas.css",
- "img/Escultura_de_coyote.jpeg",
  "img/icono2048.png",
  "img/maskable_icon.png",
  "img/maskable_icon_x128.png",
@@ -66,15 +49,6 @@ const ARCHIVOS = [
  "img/maskable_icon_x512.png",
  "img/maskable_icon_x72.png",
  "img/maskable_icon_x96.png",
- "img/pexels-craig-dennis-3701822.jpg",
- "img/pexels-creative-workshop-3978352.jpg",
- "img/pexels-erik-karits-3732453.jpg",
- "img/pexels-esteban-arango-10226903.jpg",
- "img/pexels-moises-patrício-10961948.jpg",
- "img/pexels-ralph-2270848.jpg",
- "img/pexels-rasmus-svinding-35435.jpg",
- "img/pexels-steve-397857.jpg",
- "img/pexels-vadim-b-141496.jpg",
  "img/screenshot_horizontal.png",
  "img/screenshot_vertical.png",
  "js/configura.js",
