@@ -5,7 +5,7 @@
  * dark.css, dark-mc.css o dark-hc.css */
 @import url(dark.css) screen and (prefers-color-scheme: dark);
 /* Definiciones para Material Design 3  */
-@import url(baseline.css);
+@import url(../material-tokens/css/baseline.css);
 /* Fonts utilizados */
 @import url(roboto.css);
 @import url(material-symbols-outlined.css);
@@ -15,7 +15,7 @@
 @import url(md-menu.css);
 @import url(md-standard-icon-button.css);
 @import url(md-fab-primary.css);
-@import url(md-filled-button.css);
+@import url(../lib/css/md-filled-button.css);
 @import url(md-filled-text-field.css);
 @import url(css/md-outline-button.css);
 @import url(md-switch.css);
@@ -150,4 +150,5 @@ a {
  to {
   opacity: 0;
  }
+
 }
