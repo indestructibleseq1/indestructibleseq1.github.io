@@ -14,12 +14,7 @@
  limitations under the License.
 */
 
-@import url(palette.css);
-@import url(typography.css);
-@import url(colors.css);
-@import url(shape.css);
-@import url(motion.css);
-@import url(state.css);
-@import url(elevation.css);
+
 @import url(light.css) screen and (prefers-color-scheme: light);
 @import url(dark.css) screen and (prefers-color-scheme: dark);
+
