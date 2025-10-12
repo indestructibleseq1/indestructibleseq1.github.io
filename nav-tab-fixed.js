@@ -1,4 +1,4 @@
-import { resaltaSiEstasEn } from "resaltaSiEstasEn.js"
+import { resaltaSiEstasEn } from "./resaltaSiEstasEn.js"
 
 export class NavTabFixed extends HTMLElement {
 
@@ -29,5 +29,6 @@ export class NavTabFixed extends HTMLElement {
  }
 
 }
+
 
 customElements.define("nav-tab-fixed", NavTabFixed)
