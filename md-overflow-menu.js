@@ -1,5 +1,5 @@
 import { abreElementoHtml } from "./abreElementoHtml.js"
-import { cierraElementoHtmo } from "cierraElementoHtmo.js"
+import { cierraElementoHtmo } from "./cierraElementoHtmo.js"
 
 export class MdOverflowMenu extends HTMLElement {
 
@@ -87,3 +87,4 @@ export class MdOverflowMenu extends HTMLElement {
 
 
 customElements.define("md-overflow-menu", MdOverflowMenu)
+
