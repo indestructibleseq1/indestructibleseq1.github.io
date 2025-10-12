@@ -1,4 +1,4 @@
-import { resaltaSiEstasEn } from "resaltaSiEstasEn.js"
+import { resaltaSiEstasEn } from "./resaltaSiEstasEn.js"
 
 export class NavBar extends HTMLElement {
 
@@ -29,5 +29,6 @@ export class NavBar extends HTMLElement {
  }
 
 }
+
 
 customElements.define("nav-bar", NavBar)
