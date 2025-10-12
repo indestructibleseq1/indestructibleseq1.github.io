@@ -31,83 +31,83 @@ const ARCHIVOS = [
  "favicon.ico",
  "index.html",
  "site.webmanifest",
- "./dark-hc.css",
- "./dark-mc.css",
- "./dark.css",
- "./estilos.css",
- "./light-hc.css",
- "./light-mc.css",
- "./light.css",
- "./transicion_completa.css",
- "./transicion_pestanas.css",
- "./icono2048.png",
- "./maskable_icon.png",
- "./maskable_icon_x128.png",
- "./maskable_icon_x192.png",
- "./maskable_icon_x384.png",
- "./maskable_icon_x48.png",
- "./maskable_icon_x512.png",
- "./maskable_icon_x72.png",
- "./maskable_icon_x96.png",
- "./screenshot_horizontal.png",
- "./screenshot_vertical.png",
- "./configura.js",
- "./nav-bar.js",
- "./nav-drw.js",
- "./nav-tab-fixed.js",
- "./nav-tab-scrollable.js",
- "./registraServiceWorker.js",
- "./material-symbols-outlined.css",
- "./md-cards.css",
- "./md-fab-primary.css",
- "./md-filled-button.css",
- "./md-filled-text-field.css",
- "./md-list.css",
- "./md-menu.css",
- "./md-navigation-bar.css",
- "./md-outline-button.css",
- "./md-ripple.css",
- "./md-segmented-button.css",
- "./md-slider-field.css",
- "./md-standard-icon-button.css",
- "./md-switch.css",
- "./md-tab.css",
- "./md-top-app-bar.css",
- "./roboto.css",
- "./MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints",
- "./MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf",
- "./MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].woff2",
- "./roboto-v32-latin-regular.woff2",
- "./abreElementoHtml.js",
- "./cierraElementoHtmo.js",
- "./exportaAHtml.js",
- "./getAttribute.js",
- "./htmlentities.js",
- "./muestraError.js",
- "./muestraTextoDeAyuda.js",
- "./ProblemDetails.js",
- "./querySelector.js",
- "./resaltaSiEstasEn.js",
- "./ES_APPLE.js",
- "./md-menu-button.js",
- "./md-options-menu.js",
- "./md-overflow-button.js",
- "./md-overflow-menu.js",
- "./md-select-menu.js",
- "./md-slider-field.js",
- "./md-top-app-bar.js",
- "./MdNavigationDrawer.js",
- "./baseline.css",
- "./colors.css",
- "./elevation.css",
- "./motion.css",
- "./palette.css",
- "./shape.css",
- "./state.css",
- "./typography.css",
- "./dark_dup1.css",
- "./light1.css",
- "./custom-elements.js"
+ "dark-hc.css",
+ "dark-mc.css",
+ "dark.css",
+ "estilos.css",
+ "light-hc.css",
+ "light-mc.css",
+ "light.css",
+ "transicion_completa.css",
+ "transicion_pestanas.css",
+ "icono2048.png",
+ "maskable_icon.png",
+ "maskable_icon_x128.png",
+ "maskable_icon_x192.png",
+ "maskable_icon_x384.png",
+ "maskable_icon_x48.png",
+ "maskable_icon_x512.png",
+ "maskable_icon_x72.png",
+ "maskable_icon_x96.png",
+ "screenshot_horizontal.png",
+ "screenshot_vertical.png",
+ "configura.js",
+ "nav-bar.js",
+ "nav-drw.js",
+ "nav-tab-fixed.js",
+ "nav-tab-scrollable.js",
+ "registraServiceWorker.js",
+ "material-symbols-outlined.css",
+ "md-cards.css",
+ "md-fab-primary.css",
+ "md-filled-button.css",
+ "md-filled-text-field.css",
+ "md-list.css",
+ "md-menu.css",
+ "md-navigation-bar.css",
+ "md-outline-button.css",
+ "md-ripple.css",
+ "md-segmented-button.css",
+ "md-slider-field.css",
+ "md-standard-icon-button.css",
+ "md-switch.css",
+ "md-tab.css",
+ "md-top-app-bar.css",
+ "roboto.css",
+ "MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints",
+ "MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf",
+ "MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].woff2",
+ "roboto-v32-latin-regular.woff2",
+ "abreElementoHtml.js",
+ "cierraElementoHtmo.js",
+ "exportaAHtml.js",
+ "getAttribute.js",
+ "htmlentities.js",
+ "muestraError.js",
+ "muestraTextoDeAyuda.js",
+ "ProblemDetails.js",
+ "querySelector.js",
+ "resaltaSiEstasEn.js",
+ "ES_APPLE.js",
+ "md-menu-button.js",
+ "md-options-menu.js",
+ "md-overflow-button.js",
+ "md-overflow-menu.js",
+ "md-select-menu.js",
+ "md-slider-field.js",
+ "md-top-app-bar.js",
+ "MdNavigationDrawer.js",
+ "baseline.css",
+ "colors.css",
+ "elevation.css",
+ "motion.css",
+ "palette.css",
+ "shape.css",
+ "state.css",
+ "typography.css",
+ "dark_dup1.css",
+ "light1.css",
+ "custom-elements.js",
 ]
 
 // Verifica si el código corre dentro de un service worker.
@@ -132,20 +132,23 @@ if (self instanceof ServiceWorkerGlobalScope) {
 }
 
 async function llenaElCache() {
- console.log("Intentando cargar caché:", CACHE)
- // Borra todos los cachés.
- const keys = await caches.keys()
- for (const key of keys) {
-  await caches.delete(key)
- }
- // Abre el caché de este service worker.
- const cache = await caches.open(CACHE)
- // Carga el listado de ARCHIVOS.
- await cache.addAll(ARCHIVOS)
- console.log("Cache cargado:", CACHE)
- console.log("Versión:", VERSION)
-}
+  console.log("Intentando cargar caché:", CACHE);
+  const cache = await caches.open(CACHE);
 
+  for (const archivo of ARCHIVOS) {
+    try {
+      const resp = await fetch(archivo);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      await cache.put(archivo, resp);
+      console.log(`✅ Cacheado: ${archivo}`);
+    } catch (err) {
+      console.warn(`⚠️ No se pudo cachear ${archivo}:`, err.message);
+    }
+  }
+
+  console.log("Cache cargado:", CACHE);
+  console.log("Versión:", VERSION);
+}
 /** @param {FetchEvent} evt */
 async function buscaLaRespuestaEnElCache(evt) {
  // Abre el caché.
@@ -164,6 +167,7 @@ async function buscaLaRespuestaEnElCache(evt) {
  }
 
 }
+
 
 
 
