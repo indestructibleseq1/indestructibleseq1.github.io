@@ -1,6 +1,6 @@
-import { ES_APPLE } from "ES_APPLE.js"
-import { getAttribute } from "getAttribute.js"
-import { querySelector } from "querySelector.js"
+import { ES_APPLE } from "./ES_APPLE.js"
+import { getAttribute } from "./getAttribute.js"
+import { querySelector } from "./querySelector.js"
 
 class MdTopAppBar extends HTMLElement {
 
@@ -232,5 +232,6 @@ class MdTopAppBar extends HTMLElement {
  }
 
 }
+
 
 customElements.define("md-top-app-bar", MdTopAppBar)
