@@ -1,5 +1,5 @@
 import { querySelector } from "querySelector.js"
-import { resaltaSiEstasEn } from "resaltaSiEstasEn.js"
+import { resaltaSiEstasEn } from "./resaltaSiEstasEn.js"
 
 export class NavTabScrollable extends HTMLElement {
 
@@ -100,5 +100,6 @@ export class NavTabScrollable extends HTMLElement {
  }
 
 }
+
 
 customElements.define("nav-tab-scrollable", NavTabScrollable)
