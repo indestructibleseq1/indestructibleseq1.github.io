@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { resaltaSiEstasEn } from "resaltaSiEstasEn.js"
+import { resaltaSiEstasEn } from "./resaltaSiEstasEn.js"
 import { MdNavigationDrawer } from "MdNavigationDrawer.js"
 
 export class NavDrw extends MdNavigationDrawer {
@@ -23,6 +23,7 @@ export class NavDrw extends MdNavigationDrawer {
  }
 
 }
+
 
 
 customElements.define("nav-drw", NavDrw)
