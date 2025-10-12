@@ -84,10 +84,10 @@ const ARCHIVOS = [
  "./getAttribute.js",
  "./htmlentities.js",
  "./muestraError.js",
- "muestraTextoDeAyuda.js",
+ "./muestraTextoDeAyuda.js",
  "./ProblemDetails.js",
  "./querySelector.js",
- "resaltaSiEstasEn.js",
+ "./resaltaSiEstasEn.js",
  "./ES_APPLE.js",
  "./md-menu-button.js",
  "./md-options-menu.js",
@@ -165,4 +165,5 @@ async function buscaLaRespuestaEnElCache(evt) {
  }
 
 }
+
 
