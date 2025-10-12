@@ -132,22 +132,18 @@ if (self instanceof ServiceWorkerGlobalScope) {
 }
 
 async function llenaElCache() {
-  console.log("Intentando cargar caché:", CACHE);
-  const cache = await caches.open(CACHE);
-
-  for (const archivo of ARCHIVOS) {
-    try {
-      const resp = await fetch(archivo);
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      await cache.put(archivo, resp);
-      console.log(`✅ Cacheado: ${archivo}`);
-    } catch (err) {
-      console.warn(`⚠️ No se pudo cachear ${archivo}:`, err.message);
-    }
-  }
-
-  console.log("Cache cargado:", CACHE);
-  console.log("Versión:", VERSION);
+ console.log("Intentando cargar caché:", CACHE)
+ // Borra todos los cachés.
+ const keys = await caches.keys()
+ for (const key of keys) {
+  await caches.delete(key)
+ }
+ // Abre el caché de este service worker.
+ const cache = await caches.open(CACHE)
+ // Carga el listado de ARCHIVOS.
+ await cache.addAll(ARCHIVOS)
+ console.log("Cache cargado:", CACHE)
+ console.log("Versión:", VERSION)
 }
 /** @param {FetchEvent} evt */
 async function buscaLaRespuestaEnElCache(evt) {
@@ -167,6 +163,7 @@ async function buscaLaRespuestaEnElCache(evt) {
  }
 
 }
+
 
 
 
