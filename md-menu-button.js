@@ -1,4 +1,4 @@
-import { MdNavigationDrawer } from "MdNavigationDrawer.js"
+import { MdNavigationDrawer } from "./MdNavigationDrawer.js"
 
 export class MdMenuButton extends HTMLButtonElement {
 
@@ -26,5 +26,6 @@ export class MdMenuButton extends HTMLButtonElement {
   }
  }
 }
+
 
 customElements.define("md-menu-button", MdMenuButton, { extends: "button" })
