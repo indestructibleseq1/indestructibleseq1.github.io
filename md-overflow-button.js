@@ -1,4 +1,4 @@
-import { ES_APPLE } from "ES_APPLE.js"
+import { ES_APPLE } from "./ES_APPLE.js"
 
 export class MdOverflowButton extends HTMLButtonElement {
 
@@ -21,4 +21,5 @@ export class MdOverflowButton extends HTMLButtonElement {
 }
 
 customElements
+
  .define("md-overflow-button", MdOverflowButton, { extends: "button" })
