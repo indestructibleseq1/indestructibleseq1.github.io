@@ -10,7 +10,7 @@ export class MdSelectMenu extends HTMLElement {
 
  getContent() {
   return /* HTML */ `
-   <link rel="stylesheet" href="/lib/css/material-symbols-outlined.css">
+   <link rel="stylesheet" href="material-symbols-outlined.css">
 
    <style>
     :host {
@@ -423,3 +423,4 @@ MdSelectMenu.formAssociated = true
 
 
 customElements.define("md-select-menu", MdSelectMenu)
+
