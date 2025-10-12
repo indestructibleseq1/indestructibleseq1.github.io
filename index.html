@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+
+ <meta charset="UTF-8">
+ <title>PWA con MD</title>
+
+ <!-- Resumen para los motores de búsqueda. -->
+ <meta name="description" content="PWAMD - Los indestructibles">
+
+ <script src="registraServiceWorker.js"></script>
+
+ <meta name="viewport" content="width=device-width">
+
+ <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
+ <meta name="theme-color" content="#2d2e00">
+
+ <!-- Ícono para la página web, que normalmente se pone en la raíz del sitio.
+  Puede ser diferente para cada página. -->
+ <link rel="icon" sizes="32x32" href="favicon.ico">
+
+ <!-- Configuración de la PWA para Chrome, Edge y Safari.
+  Debe ponerse en todas las páginas. -->
+ <link rel="manifest" href="site.webmanifest">
+
+ <!-- Permite a los navegadores, que como Safari no soportan el estándar
+  completo de custom elementsm, lo cumplan totalmente. Debe ponerse en todas
+  las páginas. -->
+ <script src="custom-elements.js"></script>
+
+ <!-- Configuración de todas las páginas con JavaSript. -->
+ <script type="module" src="js/configura.js"></script>
+ <link rel="stylesheet" href="css/estilos.css">
+ <link rel="stylesheet" href="css/transicion_completa.css">
+ 
+
+</head>
+
+<body>
+
+  <form id="form" novalidate onsubmit="procesa(event)">
+
+ <md-top-app-bar class="center-aligned">
+
+  <h1>PWA con MD</h1>
+
+  <button is="md-menu-button" slot="navigation"></button>
+
+  <button type="button" class="md-standard-icon-button avatar" title="Perfil"
+    slot="action">
+   <span class="material-symbols-outlined">account_circle</span>
+  </button>
+
+ </md-top-app-bar>
+
+ <main>
+    <p>
+    <span class="md-filled-text-field" accesskey="G">
+     <md-select-menu id="selectGenero" required options="opcionesDeGenero"
+       oninput="copiaMensajes()"></md-select-menu>
+     <span>Nombres</span>
+     <small id="supportingGenero">Obligatorio</small>
+    </span>
+   </p>
+
+   <p>
+    <button class="md-filled-button" style="width: 100%;">Recomendar</button>
+   </p>
+ </main>
+
+ <md-options-menu id="opcionesDeGenero" aria-label="Opciones de género">
+   <span data-value="" title="Selecciona género"></span>
+   <span data-value="ang">Angel</span>
+   <span data-value="mis">Missael</span>
+   <span data-value="mar">Marco</span>
+   <span data-value="ant">Antonio</span>
+   <span data-value="jes">Jessica</span>
+   <span data-value="est">Esther</span>
+  </md-options-menu>
+
+ <nav-drw></nav-drw>
+ </form>
+
+ <script type="module">
+  import { muestraTextoDeAyuda } from "muestraTextoDeAyuda.js"
+  import { exportaAHtml } from "exportaAHtml.js"
+  import { muestraError } from "muestraError.js"
+
+  function copiaMensajes() {
+   muestraTextoDeAyuda(selectGenero, supportingGenero, "Obligatorio")
+  }
+  exportaAHtml(copiaMensajes)
+
+  /**
+   * @param {SubmitEvent} evt
+   */
+  function procesa(evt) {
+   evt.preventDefault()
+   try {
+    copiaMensajes()
+    if (
+     selectGenero.validity.valid) {
+     const genero = selectGenero.value
+     const resultado = recomienda(genero)
+     alert(resultado)
+    }
+   } catch (e) {
+    muestraError(e)
+   }
+  }
+  exportaAHtml(procesa)
+
+  /** @param {string} genero */
+  function recomienda(genero) {
+   switch (genero) {
+  case "ang":
+    return "Me encantan los mensajes de voz.\nYo los detesto.\nSí, esos también estan chidos."
+  case "mis":
+    return "¿Qué hace un mudo bailando? Una mudanza."
+  case "mar":
+    return "¿Qué le dice una impresora a otra? Esta hoja es tuya o es impresión mía."
+  case "ant":
+    return "Buenas, quería una camiseta de un personaje inspirador.\n¿Ghandi?.\nNo, mediani."
+  case "jes":
+    return "¿Sabes por qué no se puede discutir con un DJ? Porque siempre están cambiando de tema."
+  case "est":
+    return "¿Qué hace una cebolla en una cita? Llora de emoción."
+  default:
+    return "Invalido"      
+  }  
+  }
+  
+ </script>
+
+</body>
+
+</html>
