@@ -1,6 +1,6 @@
-import { getAttribute } from "getAttribute.js"
-import { querySelector } from "querySelector.js"
-import { MdOptionsMenu } from "md-options-menu.js"
+import { getAttribute } from "./getAttribute.js"
+import { querySelector } from "./querySelector.js"
+import { MdOptionsMenu } from "./md-options-menu.js"
 
 export class MdSelectMenu extends HTMLElement {
 
@@ -420,5 +420,6 @@ export class MdSelectMenu extends HTMLElement {
 }
 
 MdSelectMenu.formAssociated = true
+
 
 customElements.define("md-select-menu", MdSelectMenu)
