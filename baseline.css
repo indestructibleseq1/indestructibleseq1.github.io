@@ -22,5 +22,6 @@
 @import url(state.css);
 @import url(elevation.css);
 @import url(light1.css) screen and (prefers-color-scheme: light);
-@import url(dark__dup1.css) screen and (prefers-color-scheme: dark);
+@import url(dark_dup1.css) screen and (prefers-color-scheme: dark);
+
 
