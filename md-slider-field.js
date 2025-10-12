@@ -1,4 +1,4 @@
-import { querySelector } from "querySelector.js"
+import { querySelector } from "./querySelector.js"
 
 export class MdSliderField extends HTMLElement {
 
@@ -116,5 +116,6 @@ export class MdSliderField extends HTMLElement {
  }
 
 }
+
 
 customElements.define("md-slider-field", MdSliderField)
