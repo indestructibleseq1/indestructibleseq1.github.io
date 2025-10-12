@@ -3,28 +3,28 @@
 @import url(./light.css) screen and (prefers-color-scheme: light);
 /* Selecciona el tema oscuro para Material Design 3. Puedes elegir
  * dark.css, dark-mc.css o dark-hc.css */
-@import url(dark.css) screen and (prefers-color-scheme: dark);
+@import url(./dark.css) screen and (prefers-color-scheme: dark);
 /* Definiciones para Material Design 3  */
-@import url(baseline.css);
+@import url(./baseline.css);
 /* Fonts utilizados */
-@import url(roboto.css);
-@import url(material-symbols-outlined.css);
+@import url(./roboto.css);
+@import url(./material-symbols-outlined.css);
 /* CSS de elementos utilizados */
-@import url(md-ripple.css);
-@import url(md-top-app-bar.css);
-@import url(md-menu.css);
-@import url(md-standard-icon-button.css);
-@import url(md-fab-primary.css);
-@import url(md-filled-button.css);
-@import url(md-filled-text-field.css);
-@import url(md-outline-button.css);
-@import url(md-switch.css);
-@import url(md-slider-field.css);
-@import url(md-segmented-button.css);
-@import url(md-list.css);
-@import url(md-cards.css);
-@import url(md-tab.css);
-@import url(md-navigation-bar.css);
+@import url(./md-ripple.css);
+@import url(./md-top-app-bar.css);
+@import url(./md-menu.css);
+@import url(./md-standard-icon-button.css);
+@import url(./md-fab-primary.css);
+@import url(./md-filled-button.css);
+@import url(./md-filled-text-field.css);
+@import url(./md-outline-button.css);
+@import url(./md-switch.css);
+@import url(./md-slider-field.css);
+@import url(./md-segmented-button.css);
+@import url(./md-list.css);
+@import url(./md-cards.css);
+@import url(./md-tab.css);
+@import url(./md-navigation-bar.css);
 
 html {
  /* Indica los temas del sistema operativo que son soportados. */
@@ -152,3 +152,4 @@ a {
  }
 
 }
+
