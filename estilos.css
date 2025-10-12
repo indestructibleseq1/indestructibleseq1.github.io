@@ -1,6 +1,6 @@
 /* Selecciona el tema claro para Material Design 3. Puedes elegir
  * light.css, light-mc.css o light-hc.css */
-@import url(light.css) screen and (prefers-color-scheme: light);
+@import url(./light.css) screen and (prefers-color-scheme: light);
 /* Selecciona el tema oscuro para Material Design 3. Puedes elegir
  * dark.css, dark-mc.css o dark-hc.css */
 @import url(dark.css) screen and (prefers-color-scheme: dark);
@@ -150,4 +150,5 @@ a {
  to {
   opacity: 0;
  }
+
 }
