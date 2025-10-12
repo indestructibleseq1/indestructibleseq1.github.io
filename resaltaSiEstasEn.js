@@ -1,4 +1,4 @@
-import { querySelector } from "querySelector.js"
+import { querySelector } from "./querySelector.js"
 
 /**
  * @param {string[]} paginas
@@ -22,5 +22,6 @@ export function resaltaSiEstasEn(paginas) {
  }
 
  return ""
+
 
 }
