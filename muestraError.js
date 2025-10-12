@@ -1,5 +1,5 @@
-import { exportaAHtml } from "exportaAHtml.js"
-import { ProblemDetails } from "ProblemDetails.js"
+import { exportaAHtml } from "./exportaAHtml.js"
+import { ProblemDetails } from "./ProblemDetails.js"
 
 /**
  * Muestra un error en la consola y en un cuadro de
@@ -38,5 +38,6 @@ export function muestraError(error) {
  }
 
 }
+
 
 exportaAHtml(muestraError)
