@@ -1,4 +1,4 @@
-import { exportaAHtml } from "exportaAHtml.js"
+import { exportaAHtml } from "./exportaAHtml.js"
 
 /**
  * Si un elemento HTML tiene un mensaje de validación, lo
@@ -21,5 +21,6 @@ export function muestraTextoDeAyuda(elementoHtml, elementoDeAyuda,
   elementoDeAyuda.textContent = elementoHtml.validationMessage
  }
 }
+
 
 exportaAHtml(muestraTextoDeAyuda)
