@@ -1,4 +1,4 @@
-import { abreElementoHtml } from "abreElementoHtml.js"
+import { abreElementoHtml } from "./abreElementoHtml.js"
 import { cierraElementoHtmo } from "cierraElementoHtmo.js"
 import { querySelector } from "querySelector.js"
 
@@ -101,5 +101,6 @@ export class MdOptionsMenu extends HTMLElement {
  }
 
 }
+
 
 customElements.define("md-options-menu", MdOptionsMenu)
